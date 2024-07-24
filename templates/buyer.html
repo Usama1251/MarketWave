@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buying Products</title>
+    <style>
+        /* Reset some default browser styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+            .heading2        {
+            text-align: center;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f4f4f4;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            font-weight:bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            color: white;
+            background-color: #0056b3;
+        }
+
+        .buying-products {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .buying-products h2 {
+            margin-top: 0;
+        }
+
+        .products-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .product h3 {
+            margin-top: 0;
+        }
+
+        .product p {
+            margin: 5px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To Buying Page</h1>
+    </header>
+    <nav>
+        <a href="/home_b/">Home</a>
+        <a href="/logout/">Logout</a>
+    </nav>
+    <h2 class="heading2">Products For Sale</h2>
+
+    <section class="buying-products">
+        <div class="products-list">
+            <article class="product">
+                <h3>Flowers</h3>
+                <p>This is flowers</p>
+                <p>Price: 500</p>
+                <button id="buy" type="submit">Buy</button>
+            </article>
+        </div>
+    </section>
+    <script>
+        document.getElementById('buy').addEventListener('click', function() {
+            // Example action: Redirect to checkout page
+            window.location.href = '/checkout/';
+        });
+    </script>
+</body>
+</html>
