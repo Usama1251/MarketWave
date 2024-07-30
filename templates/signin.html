@@ -4,8 +4,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signin</title>
+    <style>
+        /* Reset default browser styles */
+body, h1, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Ensure vertical alignment */
+}
+
+/* Styling for the header */
+header {
+    text-align: center;
+    margin-bottom: 20px; /* Add space between header and form */
+    width: 100%; /* Ensure header spans full width */
+    font-size: 2.5rem; /* Adjust font size */
+    color: #007bff; /* Blue color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Styling for the form */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%; /* Adjust width for small screens */
+}
+
+/* Styling for the heading */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    font-size: 1.875rem; /* Adjust font size */
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Styling for form groups */
+.form-floating {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+/* Styling for inputs */
+.form-floating input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Styling for labels */
+.form-floating label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #aaa;
+    transition: top 0.2s, font-size 0.2s;
+}
+
+/* Move the label when input is focused or has value */
+.form-floating input:focus + label,
+.form-floating input:not(:placeholder-shown) + label {
+    top: 0;
+    font-size: 0.75rem; /* Adjust font size */
+    color: #007bff;
+}
+
+/* Styling for the button */
+.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem; /* Adjust font size */
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the button */
+.btn:hover {
+    background-color: green;
+}
+
+/* Styling for the link */
+a {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Hover effect for the link */
+a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* Responsive Design */
+
+/* Adjustments for tablets and larger phones */
+@media (min-width: 600px) {
+    .heading {
+        font-size: 2.5rem; /* Larger font size for bigger screens */
+    }
+
+    .btn {
+        font-size: 1.125rem; /* Larger button font size */
+    }
+
+    form {
+        width: 80%; /* Adjust width for medium screens */
+    }
+}
+
+/* Adjustments for desktop screens */
+@media (min-width: 1024px) {
+    .heading {
+        font-size: 3rem; /* Larger font size for desktops */
+    }
+
+    .btn {
+        font-size: 1.25rem; /* Larger button font size */
+    }
+
+    form {
+        width: 60%; /* Adjust width for larger screens */
+    }
+}
+
+
+        
+    </style>
 </head>
 <body>
-    
+    <header><h1>MarketWave</h1></header>
+    <form method='POST'>
+        {% csrf_token %}
+        <h1 class="heading">Please sign in</h1>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingUsername" name='username' placeholder="Username" required>
+          <label for="floatingUsername">Username</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" name='password' placeholder="Password" required>
+          <label for="floatingPassword">Password</label>
+        </div>
+        <a href="/signup/">Don't have an account? Click here</a>
+        <button class="btn" type="submit">Sign in</button>
+    </form>
 </body>
 </html>

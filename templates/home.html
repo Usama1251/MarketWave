@@ -8,54 +8,96 @@
 
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+        /* Reset some default browser styles */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-        .heading {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 3rem;
-            color: #007bff;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
+/* Heading styling */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: #007bff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-        .container {
-            text-align: center;
-        }
+/* Container styling */
+.container {
+    text-align: center;
+}
 
-        h1 {
-            margin-bottom: 20px;
-        }
+/* Main heading styling */
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Adjust size of main heading */
+}
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+/* Buttons container styling */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
 
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 18px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-        .btn:hover {
-            background-color: #0056b3;
-        }
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Adjustments for tablets and larger phones */
+@media (min-width: 600px) {
+    .heading {
+        font-size: 2.5rem; /* Adjust heading font size for medium screens */
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Adjust size of main heading for medium screens */
+    }
+
+    .btn {
+        font-size: 16px; /* Adjust button font size for medium screens */
+    }
+}
+
+/* Adjustments for desktop screens */
+@media (min-width: 1024px) {
+    .heading {
+        font-size: 3rem; /* Keep or increase heading font size for larger screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust size of main heading for larger screens */
+    }
+
+    .btn {
+        font-size: 18px; /* Keep or increase button font size for larger screens */
+    }
+}
+
     </style>
 </head>
 <body>

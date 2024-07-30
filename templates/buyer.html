@@ -6,92 +6,161 @@
     <title>Buying Products</title>
     <style>
         /* Reset some default browser styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-            .heading2        {
-            text-align: center;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4; /* Optional: Add background color for consistency */
+}
 
-        header {
-            background-color: #007bff;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+/* Heading styling */
+.heading2 {
+    text-align: center;
+    margin: 20px 0;
+}
 
-        nav {
-            background-color: #f4f4f4;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            border-bottom: 1px solid #ddd;
-        }
+/* Header styling */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #007bff;
-            font-size: 16px;
-            font-weight:bold;
-        }
+/* Navigation styling */
+nav {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-            color: white;
-            background-color: #0056b3;
-        }
+/* Navigation links styling */
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 
-        .buying-products {
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-        }
+/* Navigation links hover effect */
+nav a:hover {
+    text-decoration: underline;
+    color: white;
+    background-color: #0056b3;
+    padding: 5px; /* Add padding for better touch targets */
+    border-radius: 5px;
+}
 
-        .buying-products h2 {
-            margin-top: 0;
-        }
+/* Buying products section styling */
+.buying-products {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limit width for larger screens */
+}
 
-        .products-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
+/* Heading within buying-products section */
+.buying-products h2 {
+    margin-top: 0;
+    font-size: 1.5rem; /* Responsive font size */
+}
 
-        .product {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
+/* Products list styling */
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        .product h3 {
-            margin-top: 0;
-        }
+/* Product block styling */
+.product {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        .product p {
-            margin: 5px 0;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+/* Product image styling */
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
 
-        button:hover {
-            background-color: #0056b3;
-        }
-       
+/* Product text styling */
+.product p {
+    margin: 5px 0;
+}
+
+.product strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Adjustments for tablets and larger phones */
+@media (min-width: 600px) {
+    .heading2 {
+        font-size: 1.75rem; /* Adjust heading font size for medium screens */
+    }
+
+    .buying-products {
+        margin: 40px; /* Increase margin for larger screens */
+    }
+
+    button {
+        font-size: 18px; /* Adjust button font size for medium screens */
+    }
+}
+
+/* Adjustments for desktops */
+@media (min-width: 1024px) {
+    .heading2 {
+        font-size: 2rem; /* Keep or increase heading font size for larger screens */
+    }
+
+    .buying-products {
+        margin: 40px auto; /* Center with margin auto for larger screens */
+    }
+
+    button {
+        font-size: 20px; /* Keep or increase button font size for larger screens */
+    }
+}
+
     </style>
 </head>
 <body>
@@ -100,24 +169,30 @@
     </header>
     <nav>
         <a href="/home_b/">Home</a>
+        <a href="/home_s/">Sell Something?</a>
         <a href="/logout/">Logout</a>
     </nav>
     <h2 class="heading2">Products For Sale</h2>
+    <h2 class="heading2">Welcome {{ request.user }}</h2>
 
     <section class="buying-products">
         <div class="products-list">
-            <article class="product">
-                <h3>Flowers</h3>
-                <p>This is flowers</p>
-                <p>Price: 500</p>
-                <button id="buy" type="submit">Buy</button>
-            </article>
+            {% for product in products %}
+                <article class="product">
+                    <img src="{{ product.image.url }}" alt="img">               
+                    <p><strong>Description:</strong> {{ product.description }}</p>
+                    <p><strong>Price:</strong> PKR {{ product.price }}</p>
+                    <button id="buy" type="submit">Buy</button>
+                </article>
+            {% endfor %}
         </div>
     </section>
     <script>
-        document.getElementById('buy').addEventListener('click', function() {
-            // Example action: Redirect to checkout page
-            window.location.href = '/checkout/';
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Example action: Redirect to checkout page
+                window.location.href = '/checkout/';
+            });
         });
     </script>
 </body>

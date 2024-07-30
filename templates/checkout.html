@@ -6,85 +6,95 @@
     <title>Checkout</title>
     <style>
         /* Basic styling for the page */
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
 
-        header {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 600px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
+/* Header styling */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
-        h1 {
-            margin: 0;
-            color: #007bff;
-            font-size: 30px;
-            font-weight: bold;
-        }
+/* Main heading styling */
+h1 {
+    margin: 0;
+    color: #007bff;
+    font-size: 2rem; /* Responsive font size */
+    font-weight: bold;
+}
 
-        section {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 600px;
-        }
+/* Section styling */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+}
 
-        .checkout {
-            text-align: left;
-        }
+/* Checkout section styling */
+.checkout {
+    text-align: left;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
+/* Form labels */
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+/* Form inputs and textareas */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-        .form-group input[type="radio"] {
-            margin-right: 10px;
-        }
+/* Radio buttons */
+.form-group input[type="radio"] {
+    margin-right: 10px;
+}
 
-        .form-group button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+/* Form buttons */
+.form-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
+/* Button hover effect */
+.form-group button:hover {
+    background-color: #0056b3;
+}
 
-        /* Popup styling */
+/* Popup styling */
 .popup {
     display: none;
     position: fixed;
@@ -102,27 +112,61 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* Popup text styling */
 .popup p {
     margin: 0;
-    font-size: 20px;
+    font-size: 1.25rem; /* Responsive font size */
     font-weight: bold;
 }
-.home
-        {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            font-size:20px;
 
-        }
-        .home:hover {
-            color: white;
-            background-color: #0056b3;
-        }
+/* Home link styling */
+.home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 1.25rem; /* Responsive font size */
+}
+
+/* Home link hover effect */
+.home:hover {
+    color: white;
+    background-color: #0056b3;
+    padding: 5px; /* Add padding for better visibility */
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+
+/* Adjustments for tablets and larger phones */
+@media (min-width: 600px) {
+    h1 {
+        font-size: 2.5rem; /* Adjust heading font size for medium screens */
+    }
+
+    .form-group button {
+        font-size: 18px; /* Adjust button font size for medium screens */
+    }
+}
+
+/* Adjustments for desktops */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem; /* Keep or increase heading font size for larger screens */
+    }
+
+    .form-group button {
+        font-size: 20px; /* Keep or increase button font size for larger screens */
+    }
+
+    .popup p {
+        font-size: 1.5rem; /* Increase popup text size for larger screens */
+    }
+}
+
 
     </style>
 </head>

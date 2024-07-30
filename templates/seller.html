@@ -6,127 +6,156 @@
     <title>Sell Products</title>
     <style>
         /* Basic styling for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            position: relative; /* Added for logout button positioning */
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
 
-        .heading {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+/* Heading styling */
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-        section {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            max-width: 600px;
-            margin: 0 auto;
-        }
+/* Section styling */
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
-        h3 {
-            margin-top: 0;
-        }
+/* Form heading styling */
+h3 {
+    margin-top: 0;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
 
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-        .form-group input[type="file"] {
-            padding: 0;
-        }
+.form-group input[type="file"] {
+    padding: 0;
+}
 
-        .form-group textarea {
-            resize: vertical;
-        }
+.form-group textarea {
+    resize: vertical;
+}
 
-        .form-group button {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+.form-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        .form-group button:hover {
-            background-color: #0056b3;
-        }
+.form-group button:hover {
+    background-color: #0056b3;
+}
 
-        .product-preview {
-            margin-top: 20px;
-            text-align: center;
-        }
+/* Product preview styling */
+.product-preview {
+    margin-top: 20px;
+    text-align: center;
+}
 
-        .product-preview img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+.product-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        /* Logout button styling */
-        .logout {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            font-size:20px;
-        }
+/* Navigation button styling */
+nav {
+    margin-bottom: 20px; /* Space between nav and form */
+    text-align: center; /* Center align the buttons */
+}
 
-        .logout:hover {
-            color: white;
-            background-color: #0056b3;
-        }
-        .home
-        {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            font-size:20px;
+nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-        }
-        .home:hover {
-            color: white;
-            background-color: #0056b3;
-        }
-    </style>
+nav a:hover {
+    color: white;
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Adjustments for tablets and larger phones */
+@media (min-width: 600px) {
+    .heading {
+        font-size: 2.5rem; /* Larger font size for bigger screens */
+    }
+
+    .form-group button {
+        font-size: 1.125rem; /* Larger button font size */
+    }
+
+    section {
+        width: 80%; /* Adjust width for medium screens */
+    }
+}
+
+/* Adjustments for desktop screens */
+@media (min-width: 1024px) {
+    .heading {
+        font-size: 3rem; /* Larger font size for desktops */
+    }
+
+    .form-group button {
+        font-size: 1.25rem; /* Larger button font size */
+    }
+
+    section {
+        width: 60%; /* Adjust width for larger screens */
+    }
+}
+
+            </style>
 </head>
 <body>
-    <a href="/seller_view/" class="home">Home</a>
-    <a href="/logout/" class="logout">Logout</a>
+    <nav>
+        <a href="/seller_view/">Home</a>
+        <a href="/logout/">Logout</a>
+    </nav>
     <div class="heading">
-        <h1>Welcome To Selling Page</h1>
+        <h1>Selling Page</h1>
     </div>
     <section>
         <h3>Import here to sell product</h3>
         <form id="sell-product-form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="product-image">Product Image:</label>
                 <input type="file" id="product-image" name="product-image" accept="image/*" onchange="previewImage(event)" required>
@@ -136,7 +165,7 @@
                 <textarea id="product-description" name="product-description" rows="4" placeholder="Enter product description..." required></textarea>
             </div>
             <div class="form-group">
-                <label for="product-price">Price in pkr:</label>
+                <label for="product-price">Price in PKR:</label>
                 <input type="number" id="product-price" name="product-price" placeholder="Enter product price..." step="0.01" min="0" required>
             </div>
             <div class="form-group">
@@ -146,6 +175,7 @@
         <div class="product-preview" id="product-preview">
             <h4>Preview:</h4>
             <img id="preview-image" src="" alt="">
+            <p id="preview-name"></p>
             <p id="preview-description"></p>
             <p id="preview-price"></p>
         </div>
@@ -156,6 +186,7 @@
             const input = event.target;
             const file = input.files[0];
             const preview = document.getElementById('preview-image');
+            const name = document.getElementById('preview-name');
             const description = document.getElementById('preview-description');
             const price = document.getElementById('preview-price');
 
@@ -174,10 +205,12 @@
             // Update the preview with form data
             const form = document.getElementById('sell-product-form');
             form.addEventListener('input', function() {
+                const nameValue = document.getElementById('seller-name') ? document.getElementById('seller-name').value : 'N/A';
                 const descriptionValue = document.getElementById('product-description').value;
                 const priceValue = document.getElementById('product-price').value;
+                name.textContent = `Name: ${nameValue}`;
                 description.textContent = `Description: ${descriptionValue}`;
-                price.textContent = `Price: $${priceValue}`;
+                price.textContent = `Price: PKR ${priceValue}`;
             });
         }
     </script>

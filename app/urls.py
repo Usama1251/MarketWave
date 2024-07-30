@@ -1,4 +1,6 @@
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 from app.views import Home_b, Home, Home_s, Checkout, LogoutView, SigninView, SignupView, SellerView
 urlpatterns = [
     path("", Home.as_view(), name="home"),
@@ -11,3 +13,6 @@ urlpatterns = [
     path("signup/", SignupView.as_view(), name="Signup"),
     path('logout/', LogoutView.as_view(), name="logout"),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
