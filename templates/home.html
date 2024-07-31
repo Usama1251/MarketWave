@@ -8,17 +8,20 @@
 
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <style>
-        /* Reset some default browser styles */
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            background-image: url("{% static '/img.jpg' %}");
+            background-size: cover; /* Ensure the background image covers the entire body */
+            background-position: center; /* Center the background image */
+        }
 
 /* Heading styling */
 .heading {
@@ -90,9 +93,11 @@ h1 {
     }
 
     h1 {
-        font-size: 2rem; /* Adjust size of main heading for larger screens */
+        font-size: 4rem; /* Adjust size of main heading for larger screens */
     }
-
+    h2 {
+        font-size: 3rem; /* Adjust size of main heading for larger screens */
+    }
     .btn {
         font-size: 18px; /* Keep or increase button font size for larger screens */
     }
@@ -105,7 +110,7 @@ h1 {
         <h1>Welcome to <b>MarketWave</b></h1>
     </div>
     <div class="container">
-        <h1>Looking for buying or selling?</h1>
+        <h2>Looking for buying or selling?</h2>
         <div class="buttons">
             <a href="/home_b" class="btn">buying</a>
             <a href="/seller_view/" class="btn">selling</a>
